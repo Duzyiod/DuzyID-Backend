@@ -1,0 +1,24 @@
+{
+  "name": "duzyid",
+  "version": "1.0.0",
+  "description": "The DuzyID ads system that allows you to integrate ads to your videos.",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "build": "tsc",
+    "prod": "npm run build && node bin/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "duzy",
+    "duzyid"
+  ],
+  "author": "CodeIT",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "devDependencies": {
+    "@types/node": "^10.12.21",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.1"
+  }
+}
