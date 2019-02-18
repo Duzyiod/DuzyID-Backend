@@ -17,7 +17,6 @@ accepts any of:
   * Headaer: `Content-Length: <bytelength>`
   * Body: raw file
 
-
 Success result:
 
 ```javascript
