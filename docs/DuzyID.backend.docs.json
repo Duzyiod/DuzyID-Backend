@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "8d1a55e5-459c-4bb3-b249-94a32e081250",
+		"name": "DuzyID Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ads",
+			"item": [
+				{
+					"name": "Get Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/ads?tags[]=drone&tags[]=fly&button[position][]=top&button[position][]=right&button[src]=https://d1o176s0aoq15o.cloudfront.net/duzy-id-btn.png",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ads"
+							],
+							"query": [
+								{
+									"key": "tags[]",
+									"value": "drone"
+								},
+								{
+									"key": "tags[]",
+									"value": "fly"
+								},
+								{
+									"key": "button[position][]",
+									"value": "top"
+								},
+								{
+									"key": "button[position][]",
+									"value": "right"
+								},
+								{
+									"key": "button[src]",
+									"value": "https://d1o176s0aoq15o.cloudfront.net/duzy-id-btn.png"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Products (Success)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/ads?tags[]=drone&tags[]=fly&button[position][]=top&button[position][]=right&button[src]=https://d1o176s0aoq15o.cloudfront.net/duzy-id-btn.png",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"ads"
+									],
+									"query": [
+										{
+											"key": "tags[]",
+											"value": "drone"
+										},
+										{
+											"key": "tags[]",
+											"value": "fly"
+										},
+										{
+											"key": "button[position][]",
+											"value": "top"
+										},
+										{
+											"key": "button[position][]",
+											"value": "right"
+										},
+										{
+											"key": "button[src]",
+											"value": "https://d1o176s0aoq15o.cloudfront.net/duzy-id-btn.png"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "CodeIT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept, Token"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Content-Type, Accept, Token"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1832"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"728-+HLTPetGZ/FFuNus0O2cPCRQ0F8\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Feb 2019 18:06:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": null,\n    \"data\": {\n        \"id\": \"dcd07bac-cfb8-42ec-8007-fdcf149b9277\",\n        \"button\": \"ebay\",\n        \"ecommerce\": [\n            {\n                \"id\": \"v1|312073593528|0\",\n                \"itemId\": \"v1|312073593528|0\",\n                \"title\": \"DJI Mavic Air Onyx Black Drone Deluxe Fly Case Bundle With Warranty Extension\",\n                \"imageUrl\": \"https://i.ebayimg.com/thumbs/images/g/8zkAAOSwyCNbYbYr/s-l225.jpg\",\n                \"price\": {\n                    \"value\": 719,\n                    \"currency\": \"USD\"\n                },\n                \"itemHref\": \"https://api.ebay.com/buy/browse/v1/item/v1|312073593528|0\",\n                \"source\": \"ebay\"\n            },\n            {\n                \"id\": \"v1|302939059387|0\",\n                \"itemId\": \"v1|302939059387|0\",\n                \"title\": \"DJI Mavic Air - Arctic White Drone - Fly More COMBO Plus Starter Kit\",\n                \"imageUrl\": \"https://i.ebayimg.com/thumbs/images/g/4zMAAOSwa6Jb13Sd/s-l225.jpg\",\n                \"price\": {\n                    \"value\": 799,\n                    \"currency\": \"USD\"\n                },\n                \"itemHref\": \"https://api.ebay.com/buy/browse/v1/item/v1|302939059387|0\",\n                \"source\": \"ebay\"\n            },\n            {\n                \"id\": \"v1|232415258204|0\",\n                \"itemId\": \"v1|232415258204|0\",\n                \"title\": \"DJI Spark Fly More Combo - Meadow Green Quadcopter Drone - 12MP 1080p Video\",\n                \"imageUrl\": \"https://i.ebayimg.com/thumbs/images/g/Z04AAOSwvApaAznw/s-l225.jpg\",\n                \"price\": {\n                    \"value\": 549,\n                    \"currency\": \"USD\"\n                },\n                \"itemHref\": \"https://api.ebay.com/buy/browse/v1/item/v1|232415258204|0\",\n                \"source\": \"ebay\"\n            },\n            {\n                \"id\": \"v1|233125072718|0\",\n                \"itemId\": \"v1|233125072718|0\",\n                \"title\": \"Yuneec Breeze Flying Camera Compact Smart Drone with Ultra High Definition 4K\",\n                \"imageUrl\": \"https://i.ebayimg.com/thumbs/images/g/JKoAAOSw6PtcXGIC/s-l225.jpg\",\n                \"price\": {\n                    \"value\": 109.99,\n                    \"currency\": \"USD\"\n                },\n                \"itemHref\": \"https://api.ebay.com/buy/browse/v1/item/v1|233125072718|0\",\n                \"source\": \"ebay\"\n            },\n            {\n                \"id\": \"v1|232392655765|0\",\n                \"itemId\": \"v1|232392655765|0\",\n                \"title\": \"DJI Spark Fly More Combo - Alpine White Quadcopter Drone - 12MP 1080p Video\",\n                \"imageUrl\": \"https://i.ebayimg.com/thumbs/images/g/Z08AAOSwldRaBA72/s-l225.jpg\",\n                \"price\": {\n                    \"value\": 549,\n                    \"currency\": \"USD\"\n                },\n                \"itemHref\": \"https://api.ebay.com/buy/browse/v1/item/v1|232392655765|0\",\n                \"source\": \"ebay\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
