@@ -10,7 +10,8 @@ COPY . /app
 RUN rm -rf ./node_modules
 
 # Installing
-RUN npm install --production
+RUN npm install
+RUN npm run build
 
 EXPOSE 3000
 

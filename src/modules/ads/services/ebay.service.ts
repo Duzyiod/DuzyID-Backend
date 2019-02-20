@@ -6,7 +6,7 @@ import request from 'request-promise-native';
 import { EbayProductModel } from '../models/ebay.model';
 import * as env from '../../../configs/env';
 
-const API_URL = 'https://api.ebay.com/buy/browse/v1/';
+import { getToken } from './ebay-auth.service';
 
 /* Public */
 /**
@@ -35,15 +35,15 @@ export async function search(tags: string[], limit = 5): Promise<EbayProductMode
  * @param params searching params in object
  */
 async function requestToEbayBrowseAPI(path: string, params: { [x: string]: string }) {
+    const authToken = await getToken();
     const body = await request({
         method:'GET',
-        url: `${API_URL}${path}`,
+        url: `${env.EBAY_API_BROWSE_URL}${path}`,
         qs: params,
         headers: {
-            'Authorization': `Bearer ${env.AUTH_TOKEN}`,
+            'Authorization': `Bearer ${authToken}`,
             'Content-Type': 'application/json',
             'X-EBAY-C-ENDUSERCTX': 'affiliateCampaignId=<ePNCampaignId>,affiliateReferenceId=<referenceId>',
-
         }
     });
 

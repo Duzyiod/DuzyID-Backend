@@ -24,7 +24,19 @@ if (process.env.X_POWERED_BY) {
 }
 
 /* Ebay Settings */
-export let AUTH_TOKEN = ''
-if (process.env.AUTH_TOKEN) {
-    AUTH_TOKEN = String(process.env.AUTH_TOKEN);
+export let EBAY_API_IDENTITY_URL = 'https://api.sandbox.ebay.com/identity/v1/';
+if (process.env.EBAY_API_IDENTITY_URL) {
+    EBAY_API_IDENTITY_URL = String(process.env.EBAY_API_IDENTITY_URL);
+}
+export let EBAY_API_BROWSE_URL = 'https://api.sandbox.ebay.com/buy/browse/v1/';
+if (process.env.EBAY_API_BROWSE_URL) {
+    EBAY_API_BROWSE_URL = String(process.env.EBAY_API_BROWSE_URL);
+}
+export let EBAY_APP_ID = 'sample';
+if (process.env.EBAY_APP_ID) {
+    EBAY_APP_ID = String(process.env.EBAY_APP_ID);
+}
+export let EBAY_APP_CERT = 'sample';
+if (process.env.EBAY_APP_CERT) {
+    EBAY_APP_CERT = String(process.env.EBAY_APP_CERT);
 }

@@ -4,8 +4,8 @@
   "description": "The DuzyID ads system that allows you to integrate ads to your videos.",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/server.ts",
-    "build": "tsc",
+    "start": "./node_modules/.bin/ts-node src/server.ts",
+    "build": "./node_modules/.bin/tsc",
     "prod": "sh -c \"export $(echo $(grep -v '^#' .env | xargs -0)) && node bin/server.js\"",
     "in-docker": "node bin/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,8 +26,7 @@
     "@types/uuid": "^3.4.4",
     "@types/validator": "^10.9.0",
     "ts-node": "^8.0.2",
-    "tslint": "^5.12.1",
-    "typescript": "^3.3.1"
+    "tslint": "^5.12.1"
   },
   "dependencies": {
     "express": "^4.16.4",
@@ -39,6 +38,7 @@
     "request-promise-native": "^1.0.7",
     "uuid": "^3.3.2",
     "validator": "^10.11.0",
-    "week-validator": "^1.3.3"
+    "week-validator": "^1.3.4",
+    "typescript": "^3.3.1"
   }
 }

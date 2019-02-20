@@ -35,8 +35,8 @@ export const getProducts = <RequestHandler>async function getProducts(req: Reque
         req.form = await val.validate(req.query);
         next();
     } catch (err) {
-        if (err instanceof Validator.ValidationError) {
-            return next(new InvalidFormError(err.fields));
+        if (err instanceof <any>Validator.ValidationError) {
+            return next(new InvalidFormError((err as any).fields));
         }
         return next(new ServerError());
     }
