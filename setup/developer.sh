@@ -34,5 +34,5 @@ docker run --restart always \
     --env-file=.env \
     --network $NETWORK \
     --name=$CONTAINER_NAME \
-    --publish 3000:3000 \
+    --publish 3004:3004 \
     $APP_NAME
