@@ -2,11 +2,7 @@
 NETWORK="duzyid"
 APP_NAME="duzyid.backend"
 CONTAINER_NAME="duzyid.backend"
-
-# Prepare environment
-docker stop $(docker ps -a -f "name=$CONTAINER_NAME" -q)
-docker rm -f $(docker ps -a -f "name=$CONTAINER_NAME" -q)
-docker rmi $(docker images $APP_NAME -a -q)
+VOLUME="duzyid.tmp-store"
 
 # apply environment
 ENV="${1}"
@@ -19,6 +15,21 @@ if [[ "${DPATH}" == "" ]]; then
 fi
 
 SOURCE_PATH="$(cd ${DPATH} && pwd)"
+
+# verify if .env exists
+FILE="${SOURCE_PATH}/.env"
+if [ ! -f $FILE ]; then
+    >&2 echo ".env required to exists"
+    exit 1
+fi
+
+# Create Volume
+docker volume create $VOLUME
+
+# Prepare environment
+docker stop $(docker ps -a -f "name=$CONTAINER_NAME" -q)
+docker rm -f $(docker ps -a -f "name=$CONTAINER_NAME" -q)
+docker rmi $(docker images $APP_NAME -a -q)
 
 # Docker setup
 docker build \
@@ -33,6 +44,7 @@ docker run --restart always \
     -d \
     --env-file=.env \
     --network $NETWORK \
+    --volume $VOLUME:/data \
     --name=$CONTAINER_NAME \
     --publish 3004:3004 \
     $APP_NAME

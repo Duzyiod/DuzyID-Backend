@@ -13,6 +13,8 @@ RUN rm -rf ./node_modules
 RUN npm install
 RUN npm run build
 
+VOLUME /data
+
 EXPOSE 3004
 
 CMD npm run in-docker

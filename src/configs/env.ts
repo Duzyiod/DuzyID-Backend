@@ -9,9 +9,13 @@ export let ROUTE_PATH = getEnv('ROUTE_PATH', String, '/');
 export let SITE_NAME = getEnv('SITE_NAME', String, 'localhost');
 export let BASE_URL = `//${SITE_NAME}${ROUTE_PATH}`;
 export let X_POWERED_BY = getEnv('X_POWERED_BY', String, 'REST-Application');
+export let DB_STORE_FILE = getEnv('DB_STORE_FILE', String);
 
 /* Ebay Settings */
 export let EBAY_API_IDENTITY_URL = getEnv('EBAY_API_IDENTITY_URL', String, 'https://api.sandbox.ebay.com/identity/v1/');
 export let EBAY_API_BROWSE_URL = getEnv('EBAY_API_BROWSE_URL', String, 'https://api.sandbox.ebay.com/buy/browse/v1/');
 export let EBAY_APP_ID = getEnv('EBAY_APP_ID', String);
 export let EBAY_APP_CERT = getEnv('EBAY_APP_CERT', String);
+
+/* Ads Settings */
+export let DEFAULT_BUTTON_SRC = getEnv('DEFAULT_BUTTON_SRC', String, 'https://d1o176s0aoq15o.cloudfront.net/duzy-id-btn.png');

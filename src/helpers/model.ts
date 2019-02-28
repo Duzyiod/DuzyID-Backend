@@ -41,3 +41,24 @@ export abstract class Model {
         }
     }
 }
+
+export function get<T>(base: object, path: string, type: (v: any) => T, otherwise: any = null): T {
+    const value = _.get(base, path);
+
+    if (value === undefined) {
+        return otherwise;
+    }
+
+    return type(value);
+}
+
+export function getMap<T>(base: object, path: string, type: (v: any) => T): T[] {
+    const value = _.get(base, path);
+    const result = [];
+
+    if (Array.isArray(value) === true) {
+        result.push(...value.map(type));
+    }
+
+    return result;
+}
