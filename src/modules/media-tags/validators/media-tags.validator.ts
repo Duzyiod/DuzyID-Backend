@@ -39,7 +39,7 @@ export const setMedia = <RequestHandler>async function setMedia(req: Request & {
         val.field('button.position', [
             Validator.default(['top', 'right']),
             Validator.validator((field: [string, string]) => {
-                return ['top', 'middle', 'bottom'].includes(field[0]) && ['left', 'right'].includes(field[1]);
+                return ['top', 'bottom'].includes(field[0]) && ['left', 'right'].includes(field[1]);
             }),
         ]);
         val.field('button.src', [

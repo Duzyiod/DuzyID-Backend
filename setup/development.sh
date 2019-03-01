@@ -26,12 +26,10 @@ fi
 # Create Volume
 docker volume create $VOLUME
 
-# Prepare environment
-docker stop $(docker ps -a -f "name=$CONTAINER_NAME" -q)
-docker rm -f $(docker ps -a -f "name=$CONTAINER_NAME" -q)
+# Prepare Image
 docker rmi $(docker images $APP_NAME -a -q)
 
-# Docker setup
+# Image Setup
 docker build \
     -t $APP_NAME \
     --build-arg ENV=$ENV \
@@ -39,7 +37,11 @@ docker build \
     -f $SOURCE_PATH/Dockerfile \
     $SOURCE_PATH
 
-# Docker run
+# Prepare Container
+docker stop $(docker ps -a -f "name=$CONTAINER_NAME" -q)
+docker rm -f $(docker ps -a -f "name=$CONTAINER_NAME" -q)
+
+# Run Container
 docker run --restart always \
     -d \
     --env-file=.env \

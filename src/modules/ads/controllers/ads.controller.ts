@@ -27,7 +27,7 @@ export const getProducts = <RequestHandler>async function getProducts(req: Reque
 
 export const getProductByMedia = <RequestHandler>async function getProductByMedia(req: Request & { form: any, media: MediaTagsModel }, res: Response, next: NextFunction) {
     try {
-        const { tags, button } = req.form;
+        const { tags, button } = req.media;
         const products = await ebayService.search(tags, 5);
 
         const result = new AdsModel({

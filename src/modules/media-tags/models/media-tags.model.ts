@@ -3,7 +3,7 @@ import * as env from '../../../configs/env';
 import { Model, get, getMap } from '../../../helpers/model';
 import { ModelError } from '../../../helpers/errors/errors';
 
-export type AdsButton = { src: string, position: ['top'|'middle'|'bottom', 'left'|'right'] };
+export type AdsButton = { src: string, position: ['top'|'bottom', 'left'|'right'] };
 
 export class MediaTagsModel extends Model {
     public id: string;
@@ -65,6 +65,6 @@ export class MediaTagsModel extends Model {
         return {
             _id: this.id,
             ...this.shortView,
-        }
+        };
     }
 }
