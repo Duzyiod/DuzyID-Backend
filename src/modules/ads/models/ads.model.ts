@@ -6,7 +6,7 @@ import { ModelError } from '../../../helpers/errors/errors';
 import { ProductModel, ProductSources } from './product.model';
 import { EbayProductModel } from './ebay.model';
 
-export type AdsButton = { src: string, position: ['top'|'middle'|'bottom', 'left'|'right'] };
+export type AdsButton = { src: string, position: ['top' | 'middle' | 'bottom', 'left' | 'right'] };
 export const BUTTON_SRC = 'https://d1o176s0aoq15o.cloudfront.net/duzy-id-btn.png';
 
 /**
@@ -22,11 +22,13 @@ export class AdsModel extends Model {
         if (this._button && this._button.src) {
             return this._button;
         }
+
         return {
             src: BUTTON_SRC,
             position: ['top', 'right'],
         };
     }
+
     public set button(value) {
         if (
             typeof value === 'object' &&

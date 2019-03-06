@@ -1,9 +1,9 @@
 import * as _ from 'lodash';
-import * as env from '../../../configs/env';
 import { Model, get, getMap } from '../../../helpers/model';
 import { ModelError } from '../../../helpers/errors/errors';
 
-export type AdsButton = { src: string, position: ['top'|'bottom', 'left'|'right'] };
+export type AdsButton = { src: string, position: ['top' | 'bottom', 'left' | 'right'] };
+export const BUTTON_SRC = 'https://d1o176s0aoq15o.cloudfront.net/duzy-id-btn.png';
 
 export class MediaTagsModel extends Model {
     public id: string;
@@ -18,10 +18,11 @@ export class MediaTagsModel extends Model {
             return this._button;
         }
         return {
-            src: env.DEFAULT_BUTTON_SRC,
+            src: BUTTON_SRC,
             position: ['top', 'right'],
         };
     }
+
     public set button(value) {
         if (
             typeof value === 'object' &&
