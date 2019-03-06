@@ -6,7 +6,7 @@ import request from 'request-promise-native';
 import * as env from '../../../configs/env';
 
 // It stays only on App instance level
-export let accessToken: string|null = null;
+export let accessToken: string | null = null;
 
 export async function getToken(): Promise<string> {
     if (accessToken !== null) {
@@ -15,8 +15,7 @@ export async function getToken(): Promise<string> {
 
     const authHeader = Buffer.from(`${env.EBAY_APP_ID}:${env.EBAY_APP_CERT}`).toString("base64");
     const path = 'oauth2/token';
-    const body = await request({
-        method:'POST',
+    const body = await request.post({
         url: `${env.EBAY_API_IDENTITY_URL}${path}`,
         headers: {
             'Authorization': `Basic ${authHeader}`,

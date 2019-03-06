@@ -1,5 +1,5 @@
-import { AdsButton } from '../../../../modules/ads/models/ads.model';
-import { ProductModel, ProductSources } from '../../../../modules/ads/models/product.model'
+import { AdsButton } from '../../../../../modules/ads/models/ads.model';
+import { ProductModel, ProductSources } from '../../../../../modules/ads/models/product.model'
 
 export const mockModel = {};
 export const mockProductSources: ProductSources = 'ebay';

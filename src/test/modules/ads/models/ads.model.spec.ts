@@ -1,5 +1,5 @@
 import { AdsModel } from '../../../../modules/ads/models/ads.model';
-import { mockProductSources, mockAdsButton, mockProductModel } from '../../../mocks/modules/ads/ads.model.mock';
+import { mockProductSources, mockAdsButton, mockProductModel } from '../../../mocks/modules/ads/models/ads.model.mock';
 import { expect } from 'chai';
 
 describe('modules/ads/models/ads.model', function () {

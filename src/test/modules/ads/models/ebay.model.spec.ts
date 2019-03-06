@@ -1,5 +1,5 @@
 import { EbayProductModel } from '../../../../modules/ads/models/ebay.model';
-import { mockProductModel } from '../../../mocks/modules/ads/ebay.model.mock';
+import { mockProductModel } from '../../../mocks/modules/ads/models/ebay.model.mock';
 import { expect } from 'chai';
 
 describe('modules/ads/models/ebay.model', function () {
