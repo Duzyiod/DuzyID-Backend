@@ -1,6 +1,9 @@
+import { chai } from '../../../setup';
+
 import { MediaTagsModel } from '../../../../modules/media-tags/models/media-tags.model';
-import { mockAdsButton, mediaTags } from '../../../mocks/modules/media-tags/media-tags.model.mock';
-import { expect } from 'chai';
+import { mockAdsButton, mediaTags } from '../../../mocks/modules/media-tags/models/media-tags.model.mock';
+
+const { expect } = chai;
 
 describe('modules/media-tags/models/media-tags.model', function () {
 

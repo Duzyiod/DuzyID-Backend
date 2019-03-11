@@ -1,6 +1,9 @@
+import { chai } from '../../../setup';
+
 import { AdsModel } from '../../../../modules/ads/models/ads.model';
 import { mockProductSources, mockAdsButton, mockProductModel } from '../../../mocks/modules/ads/models/ads.model.mock';
-import { expect } from 'chai';
+
+const { expect } = chai;
 
 describe('modules/ads/models/ads.model', function () {
 

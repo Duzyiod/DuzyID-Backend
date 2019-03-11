@@ -1,6 +1,6 @@
-import { AdsButton } from '../../../../modules/media-tags/models/media-tags.model';
+import { AdsButton } from '../../../../../modules/media-tags/models/media-tags.model';
 
-export const mockAdsButton: AdsButton = { src: 'src', position: ['top', 'left'] };
+export const mockAdsButton: AdsButton = { src: 'https://ButtonSrc.com/', position: ['top', 'left'] };
 
 type MediaTags = {
     id: string,
@@ -13,8 +13,8 @@ type MediaTags = {
 
 export const mediaTags: MediaTags = {
     id: 'id',
-    previewUrl: 'previewUrl',
-    videoUrl: 'videoUrl',
+    previewUrl: 'https://previewUrl.com/',
+    videoUrl: 'https://previewUrl.com/',
     categoryId: 1,
     tags: ['one', 'two'],
     button: mockAdsButton

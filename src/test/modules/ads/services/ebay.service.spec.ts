@@ -1,11 +1,10 @@
-import setTestEnv from './../../../env.test'
-setTestEnv();
+import { chai, sinon } from '../../../setup';
 
-import sinon from 'sinon';
-import { assert, expect } from 'chai';
 import { search } from '../../../../modules/ads/services/ebay.service';
 import * as request from '../../../../modules/ads/services/requestToEbay';
 import { mockFound, mockTags } from '../../../mocks/modules/ads/services/ebay.service.mock';
+
+const { expect, assert } = chai;
 
 describe('modules/ads/services/ebay.service', function () {
     describe('search', function () {

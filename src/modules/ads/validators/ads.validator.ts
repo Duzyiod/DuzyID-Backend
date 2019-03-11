@@ -27,6 +27,7 @@ export const getProducts = <RequestHandler>async function getProducts(req: Reque
                 return ['top', 'middle', 'bottom'].includes(field[0]) && ['left', 'right'].includes(field[1]);
             }),
         ]);
+        
         val.field('button.src', [
             Validator.required,
             Validator.validator(isUrl),

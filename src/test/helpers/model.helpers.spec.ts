@@ -1,6 +1,8 @@
 import { Model, get, getMap } from '../../helpers/model';
 import { MockModel, mockModel, mockNotUUID, mockUUID, mockBaseObject } from '../mocks/helpers/model.mock';
-import { expect, assert } from 'chai';
+import { chai } from '../setup'
+
+const { expect, assert } = chai;
 
 describe('helpers/model', function () {
     describe('constructor', function () {

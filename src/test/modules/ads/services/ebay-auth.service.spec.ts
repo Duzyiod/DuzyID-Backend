@@ -1,11 +1,10 @@
-import setTestEnv from './../../../env.test'
-setTestEnv();
+import { chai, sinon } from '../../../setup';
 
 import request from 'request-promise-native';
-import sinon from 'sinon';
-import { expect } from 'chai';
 import { getToken, expireToken } from '../../../../modules/ads/services/ebay-auth.service';
 import { mockJSON } from '../../../mocks/modules/ads/services/ebay-auth.service.mock'
+
+const { expect } = chai;
 
 describe('modules/ads/services/ebay-auth.service', function () {
     describe('getToken', function () {

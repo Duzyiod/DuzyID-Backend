@@ -1,6 +1,9 @@
+import { chai } from '../../../setup';
+
 import { EbayProductModel } from '../../../../modules/ads/models/ebay.model';
 import { mockProductModel } from '../../../mocks/modules/ads/models/ebay.model.mock';
-import { expect } from 'chai';
+
+const { expect } = chai;
 
 describe('modules/ads/models/ebay.model', function () {
 

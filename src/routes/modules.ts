@@ -1,5 +1,3 @@
-
-
 import { Router } from 'express';
 
 import { router as ads } from '../modules/ads';
