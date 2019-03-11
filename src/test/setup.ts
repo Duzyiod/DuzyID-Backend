@@ -12,7 +12,7 @@ import request from 'supertest';
 export { sinon, chai, request };
 
 export const initServer = function () {
-    const router = require('../../src/routes/main')
+    const router = require('../routes/main')
     const express = require('express');
     const app = express();
 
