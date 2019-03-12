@@ -8,7 +8,8 @@
     "build": "./node_modules/.bin/tsc",
     "prod": "sh -c \"export $(echo $(grep -v '^#' .env | xargs -0)) && node bin/server.js\"",
     "in-docker": "node bin/server.js",
-    "test:mocha": "mocha --exit --require ts-node/register -- --recursive ./src/test/**/**/*.*.spec.ts",
+    "test:unit": "mocha --exit --require ts-node/register -- --recursive ./src/test/unit/**/**/*.*.spec.ts",
+    "test:integrations": "mocha --exit --require ts-node/register -- --recursive ./src/test/integration/**/**/*.*.spec.ts",
     "test:coverage": "npm run build && istanbul cover _mocha -- -R spec --recursive ./bin/test",
     "test": "npm run test:mocha"
   },
