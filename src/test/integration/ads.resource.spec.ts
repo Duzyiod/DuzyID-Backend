@@ -6,7 +6,7 @@ import * as requestToEbay from '../../modules/ads/services/requestToEbay';
 
 const { expect } = chai;
 
-describe('modules/ads/controllers/ads.controllers', function () {
+describe('Resource: /ads', function () {
 
     describe('#GET / products', function () {
         before(function () {

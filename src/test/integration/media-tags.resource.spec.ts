@@ -5,7 +5,7 @@ import * as mediaTagsService from '../../modules/media-tags/services/media-tags.
 
 const { expect } = chai;
 
-describe('modules/media-tags/controllers/media-tags.controller', function () {
+describe('Resource: /media-tags', function () {
     after(function () {
         deleteTestDB();
     });
