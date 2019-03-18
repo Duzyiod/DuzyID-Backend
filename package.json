@@ -8,7 +8,10 @@
     "build": "./node_modules/.bin/tsc",
     "prod": "sh -c \"export $(echo $(grep -v '^#' .env | xargs -0)) && node bin/server.js\"",
     "in-docker": "node bin/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:unit": "mocha --exit --require ts-node/register -- --recursive ./src/test/unit/**/**/*.*.spec.ts",
+    "test:integrations": "mocha --exit --require ts-node/register -- --recursive ./src/test/integration/**/**/*.*.spec.ts",
+    "test:coverage": "npm run build && istanbul cover _mocha -- -R spec --recursive ./bin/test",
+    "test": "npm run test:mocha"
   },
   "keywords": [
     "duzy",
@@ -17,14 +20,23 @@
   "author": "CodeIT",
   "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
+    "@types/chai": "^4.1.7",
     "@types/express": "^4.16.1",
     "@types/is-url": "^1.2.28",
     "@types/lodash": "^4.14.120",
+    "@types/mocha": "^5.2.6",
     "@types/morgan": "^1.7.35",
     "@types/node": "^10.12.21",
     "@types/request-promise-native": "^1.0.15",
+    "@types/sinon": "^7.0.8",
+    "@types/supertest": "^2.0.7",
     "@types/uuid": "^3.4.4",
     "@types/validator": "^10.9.0",
+    "chai": "^4.2.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^6.0.2",
+    "sinon": "^7.2.7",
+    "supertest": "^3.4.2",
     "ts-node": "^8.0.2",
     "tslint": "^5.12.1"
   },

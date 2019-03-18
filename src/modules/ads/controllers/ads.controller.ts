@@ -1,4 +1,5 @@
 import { RequestHandler, Request, Response, NextFunction } from 'express';
+import _isEmpty from "lodash/isEmpty";
 
 import * as ebayService from '../services/ebay.service';
 import { AdsModel } from '../models/ads.model'
@@ -28,6 +29,14 @@ export const getProducts = <RequestHandler>async function getProducts(req: Reque
 export const getProductByMedia = <RequestHandler>async function getProductByMedia(req: Request & { form: any, media: MediaTagsModel }, res: Response, next: NextFunction) {
     try {
         const { tags, button } = req.media;
+
+        if (_isEmpty(tags)) {
+            return res.send({
+                error: null,
+                data: [],
+            });
+        }
+
         const products = await ebayService.search(tags, 5);
 
         const result = new AdsModel({

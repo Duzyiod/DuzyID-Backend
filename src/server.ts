@@ -4,7 +4,7 @@ import * as env from './configs/env';
 import { router } from './routes/main';
 
 // Set configs for logging
-import {} from './configs/logger';
+import { } from './configs/logger';
 
 // Init Express Application
 const app = express();

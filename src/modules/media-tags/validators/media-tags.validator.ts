@@ -14,10 +14,12 @@ export const setMedia = <RequestHandler>async function setMedia(req: Request & {
             Validator.required,
             Validator.validator(isUrl),
         ]);
+
         val.field('videoUrl', [
             Validator.required,
             Validator.validator(isUrl),
         ]);
+
         val.field('categoryId', [
             Validator.required,
             Validator.validator(isInteger).message('categoryId must be in integer'),
@@ -42,6 +44,7 @@ export const setMedia = <RequestHandler>async function setMedia(req: Request & {
                 return ['top', 'bottom'].includes(field[0]) && ['left', 'right'].includes(field[1]);
             }),
         ]);
+        
         val.field('button.src', [
             Validator.default(env.DEFAULT_BUTTON_SRC),
             Validator.validator(isUrl),
